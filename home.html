@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220427/pngtree-webinar-banner-e-learning-internet-lesson-image_1091839.jpg');
+        }
+
+        nav {
+            background-color: #007BFF;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?education,learning');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            margin: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="login.html">login</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <input type="text" id="search" placeholder="Search courses..." onkeyup="searchCourses()">
+    </nav>
+
+    <div class="hero">
+        Welcome, <span id="user-name"></span>! Explore Your Learning Journey.
+    </div>
+
+    <div class="content">
+        <h2>Popular Courses</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://pluspng.com/img-png/web-development-png-image-850.png" alt="Course 1">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="card">
+                <img src="https://s40424.pcdn.co/in/wp-content/uploads/2022/10/What-is-M.Tech-in-Artificial-Intelligence_AI.jpg.optimal.jpg" alt="Course 2">
+                <h3>Artificial Intelligence</h3>
+                <p>Explore AI and Machine Learning.</p>
+            </div>
+            <div class="card">
+                <img src="https://wallpaperaccess.com/full/2327525.jpg" alt="Course 3">
+                <h3>Business Intelligence</h3>
+                <p>Master leadership and strategy.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const username = localStorage.getItem("username");
+            document.getElementById("user-name").innerText = username || "User";
+        });
+
+        function searchCourses() {
+            alert("Search functionality coming soon!");
+        }
+    </script>
+</body>
+</html>
