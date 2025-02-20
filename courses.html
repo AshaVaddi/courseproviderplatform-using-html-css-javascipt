@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+            padding: 20px;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .course-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        .course-card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .course-card h3 {
+            margin: 10px 0;
+            color: #555;
+        }
+        .course-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .course-card a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Courses</h2>
+    <div class="course-container">
+        <div class="course-card">
+            <img src="https://getwallpapers.com/wallpaper/full/6/7/d/491909.jpg" alt="Java Course">
+            <h3>Java</h3>
+            <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/">Material</a>
+        </div>
+        <div class="course-card">
+            <img src="https://pluspng.com/img-png/web-development-png-image-850.png" alt="Web Development">
+            <h3>Web Development</h3>
+            <a href="https://www.koenig-solutions.com/web-application-fundamentals-course">Material</a>
+        </div>
+        <div class="course-card">
+            <img src="https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/operating-system-t.jpg" alt="Operating Systems">
+            <h3>Operating Systems</h3>
+            <a href="https://os-book.com/OS8/os8c/slide-dir/">Material</a>
+        </div>
+        <div class="course-card">
+            <img src="https://www.yumpu.com/en/image/facebook/63025972.jpg" alt="Computer Architecture">
+            <h3>Computer Organization & Architecture</h3>
+            <a href="https://drive.google.com/file/d/1dLgNgshADpSqCkiWhpa5tS5H6otYTbaY/view">Material</a>
+        </div>
+        <div class="course-card">
+            <img src="https://s40424.pcdn.co/in/wp-content/uploads/2022/10/What-is-M.Tech-in-Artificial-Intelligence_AI.jpg.optimal.jpg" alt="Ai">
+            <h3>Artificial intellegnce tools and techniques</h3>
+            <a href="https://www.geeksforgeeks.org/what-is-an-ai-technique/">Material</a>
+        </div>
+        <div class="course-card">
+            <img src="https://wallpaperaccess.com/full/2327525.jpg" alt="bi">
+            <h3>bussiness intellegnce</h3>
+            <a href="https://www.tutorialspoint.com/course/business-intelligence-analyst/index.asp">Material</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Courses Page Loaded");
+        });
+    </script>
+</body>
+</html>
