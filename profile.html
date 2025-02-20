@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .profile-container {
+            background: white;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #007BFF;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        .info {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-list li {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>User Profile</h2>
+        <p class="info">Username: <span id="profile-username"></span></p>
+        <p class="info">Email: <span id="profile-email"></span></p>
+        <h3>Enrolled Courses</h3>
+        <ul class="course-list" id="course-list"></ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const username = localStorage.getItem("username") || "Guest";
+            const email = localStorage.getItem("email") || "email";
+            const courses = JSON.parse(localStorage.getItem("courses")) || [];
+
+            document.getElementById("profile-username").innerText = username;
+            document.getElementById("profile-email").innerText = email;
+            
+            const courseList = document.getElementById("course-list");
+            if (courses.length > 0) {
+                courses.forEach(course => {
+                    let li = document.createElement("li");
+                    li.innerText = course;
+                    courseList.appendChild(li);
+                });
+            } else {
+                courseList.innerHTML = "<li>No courses enrolled</li>";
+            }
+        });
+    </script>
+</body>
+</html>
